@@ -14,7 +14,7 @@ defmodule TrappedLinkRing do
       :crash ->
         1/0
       {:EXIT, pid, reason} ->
-        IO.puts "#{inspect self} received {:EXIT, #{inspect pid}, #{reason}}"
+        IO.puts "#{inspect self} received {:EXIT, #{inspect pid}, #{inspect reason}}"
         loop
     end
   end
